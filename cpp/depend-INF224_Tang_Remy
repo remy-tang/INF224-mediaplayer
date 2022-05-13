@@ -1,0 +1,8 @@
+MediaObject.o: MediaObject.cpp MediaObject.h
+main.o: main.cpp tcpserver.h ccsocket.h MediaObject.h Photo.h Video.h \
+ Film.h MediaGroup.h MediaDatabase.h
+Film.o: Film.cpp Film.h Video.h MediaObject.h
+MediaDatabase.o: MediaDatabase.cpp MediaObject.h Photo.h Video.h Film.h \
+ MediaGroup.h MediaDatabase.h
+ccsocket.o: ccsocket.cpp ccsocket.h
+tcpserver.o: tcpserver.cpp tcpserver.h ccsocket.h
